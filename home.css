@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+:root {
+  --primary: #ff92a5;
+  --dark: black;
+  --body: black;
+  --box-shadow: 0 10px 22px rgba(28, 4, 4, 0.125);
+}
+
+body {
+  font-family: "Roboto slab", serif, "Raleway", sans-serif, "Times New Roman",
+    Times, serif;
+  line-height: 1.7;
+  color: var(--body);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-4 {
+  color: var(--dark);
+  font-weight: 700;
+}
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+
+img {
+  width: 50%;
+}
+
+.navbar {
+  box-shadow: var(--box-shadow);
+}
+
+.navbar .navbar-brand .logo {
+  width: 50%;
+  border-radius: 0;
+}
+
+.navbar .nav-link {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hero {
+  background-image: url("image/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(228, 121, 150, 0.8);
+  z-index: -1;
+}
+
+section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.card-effect {
+  box-shadow: var(--box-shadow);
+  background-color: #fff;
+  padding: 20px;
+  transition: all 0.35s ease;
+}
+
+.card-effect:hover {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.iconbox {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 25px;
+  border-radius: 100px;
+  flex: none;
+}
+
+.service {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.service::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: var(--primary);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.service:hover .iconbox {
+  background-color: #fff;
+  color: var(--primary);
+}
+
+.service:hover h5,
+.service:hover p {
+  color: #fff;
+}
+
+.service:hover::after {
+  opacity: 1;
+  top: 0;
+}
+
+.col-img .shaira img {
+  height: 160vh;
+  width: 105%;
+}
+
+.project {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.project img {
+  transition: all 0.4s ease;
+  width: 100%;
+  margin: 10px;
+}
+
+.img_shai {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
+.project:hover img {
+  transform: scale(1.1);
+}
+
+.project .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  padding: 30px;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.4s ease;
+  opacity: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.aboutme {
+  display: flex;
+  margin: 20px;
+}
+
+#aboutme {
+  margin-bottom: 100px;
+}
+
+.aboutme-img {
+  float: right;
+  height: 210px;
+  width: 200px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.list {
+  height: 200px;
+}
+
+ul li {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.shaira-con {
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.container a img {
+  border-radius: 50%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  left: 15%;
+}
+
+.col-lg-6 {
+  line-height: 200px;
+  margin-left: -200px;
+}
+
+#fave .container {
+  justify-content: center;
+  width: 900px;
+  padding: 50px;
+}
+
+#fave .container div {
+  margin-bottom: 20px;
+}
+
+.carousel-caption h5 {
+  color: #fff;
+}
+
+.carousel-item.fav img {
+  height: 500px;
+}
+
+/*section*/
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  flex-flow: wrap;
+  justify-content: center;
+  margin: 15px;
+}
+
+.profile img.img_prof {
+  height: 400px;
+  width: 400px;
+  margin-top: 50px;
+  border-radius: 50%;
+  border: 1px solid #7d7777;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.782);
+  max-width: inherit;
+}
+
+.prof_data {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+
+#prof {
+  background-image: url("https://i.pinimg.com/564x/25/99/82/259982431fb0c0c77b8f88b3aeaaa10e.jpg");
+  background-size: cover;
+}
+
+/*carousel*/
+
+#carouselExampleControls {
+  margin: 50px;
+}
+
+.card {
+  margin: 0 0.3em;
+  width: 350px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("https://i.pinimg.com/564x/25/99/82/259982431fb0c0c77b8f88b3aeaaa10e.jpg");
+  background-size: cover;
+  color: white;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+}
+
+.carousel-item.prof {
+  height: 100%;
+  padding-bottom: 35px;
+}
+
+.carousel-inner.prof {
+  width: 385px;
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+.card-body {
+  margin: 5px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.card-body .card-title {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.card-body p {
+  font-size: 19px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  line-height: 30px;
+}
+
+.card-body p b {
+  font-size: 19px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 30px;
+}
